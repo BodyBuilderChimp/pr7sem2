@@ -14,8 +14,8 @@
 
 1. **Клонировать репозиторий и перейти в корневой каталог:**
    ```bash
-   git clone https://github.com/BodyBuilderChimp/pr5sem2
-   cd pr5sem2
+   git clone https://github.com/BodyBuilderChimp/pr7sem2
+   cd pr7sem2
    ```
 2. **Создать и перейти в директорию сборки:**
    ```bash
