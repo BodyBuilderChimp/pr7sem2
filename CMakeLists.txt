@@ -6,7 +6,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -O2")
 
 add_executable(basic basic.c)
 add_executable(ignore ignore.c)
-add_executable(nmap nmap.c)
+add_executable(mmap mmap.c)
 
 add_custom_target(setup
     COMMAND ${CMAKE_COMMAND} -E env bash ./gen_structure.sh
@@ -21,11 +21,11 @@ add_custom_target(run
     COMMAND ${CMAKE_COMMAND} -E echo "[search_ignore] поиск слова с -i"
     COMMAND ./ignore -i test
     COMMAND ${CMAKE_COMMAND} -E echo "[search_mmap] поиск слова через mmap"
-    COMMAND ./nmap -i test
+    COMMAND ./mmap -i test
     WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
 )
 
 add_custom_target(clean-all
-    COMMAND ${CMAKE_COMMAND} -E rm -f basic ignore nmap
+    COMMAND ${CMAKE_COMMAND} -E rm -f basic ignore mmap
     COMMENT "Cleaning all binaries"
 )
